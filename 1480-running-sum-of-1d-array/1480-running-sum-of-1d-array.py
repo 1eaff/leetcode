@@ -1,8 +1,5 @@
 class Solution:
     def runningSum(self, nums: List[int]) -> List[int]:
-        cached = 0
-        ret = []
-        for n in nums:
-            cached += n
-            ret.append(cached)
-        return ret
+        for ix in range(1, len(nums)):
+            nums[ix] += nums[ix - 1]
+        return nums
