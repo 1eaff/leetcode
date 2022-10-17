@@ -14,6 +14,5 @@ class Solution:
             lst.append(nums1[i]); i += 1
         while j != n:
             lst.append(nums2[j]); j += 1
-        print(len(lst))
         for ix in range(m + n):
             nums1[ix] = lst[ix]
