@@ -12,9 +12,9 @@ class Solution:
                 head_iter.next = list1; list1 = list1.next; head_iter = head_iter.next
             else:
                 head_iter.next = list2; list2 = list2.next; head_iter = head_iter.next
-        while list1 is not None:
-            head_iter.next = list1; list1 = list1.next; head_iter = head_iter.next
-        while list2 is not None:
-            head_iter.next = list2; list2 = list2.next; head_iter = head_iter.next
+        if list1 is not None:
+            head_iter.next = list1
+        if list2 is not None:
+            head_iter.next = list2
         return dummy_head.next
             
